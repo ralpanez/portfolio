@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Rafael Alpañez Vega</title>
+    <meta name="description" content="Primera práctica: Portfolio personal" />
+    <meta name="author" content="Rafael Alpañez Vega" />
+    <meta name="keywords" content="portfolio, personal, prometeo" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="perfil">
+                <img src="img/me.png" alt="Rafael Alpañez Vega" class="foto-perfil">
+                <h1>Rafael Alpañez Vega</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#acerca">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <h2>Bienvenid@ a mi Portfolio</h2>
+                <p>
+                    Estudiante del ciclo ASIR en <strong>Prometeo</strong>!
+                    <br>Este portfolio representa mi primera práctica, aplicando HTML5, CSS3 y diseño responsive
+                </p>
+            </div>
+        </section>
+
+        <section id="acerca" class="section">
+            <div class="container">
+                <h2>Sobre mí</h2>
+                <p>
+                    ¡Hola! Soy Rafa, y ahora mismo estoy estudiando ASIR (Administración de Sistemas Informáticos en Red) mientras trabajo como comercial en Mercabarna.
+                    <br><br>
+                    Siempre me ha gustado la tecnología, y desde hace tiempo compagino mi trabajo con mi pasión por programar. Uno de mis proyectos personales es <a href="http://www.urbaloca.es/" target="_blank">Urbaloca</a>, un juego online multijugador que desarrollo desde cero, tanto el servidor como el cliente.
+                    <br><br>
+                    Empecé a desarollar en 2005, usando HTML, CSS, PHP y Javascript. Más tarde, sobre 2006 conocí la tecnología Flash de Adobe (antiguo Macromedia) y aprendí Actionscript (2.0, posteriormente 3.0  y después, lamentablemente dejó de existir).
+                    <br><br>
+                    También soy músico, toco la guitarra y el piano, canto y tengo mi propio estudio de grabación.
+                </p>
+            </div>
+        </section>
+
+        <section id="stack" class="section">
+            <div class="container">
+                <h2>Stack Tecnológico</h2>
+                <div class="stack-grid">
+                    <div>
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML5, CSS3 y diseño responsive</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Vue.js (componentes, eventos personalizados)</li>
+                            <li>Phaser.io (motor de juegos 2D)</li>
+                            <li>Diseño isométrico y Pixel Art</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Java (servidor principal de Urbaloca)</li>
+                            <li>WebSockets (comunicación en tiempo real)</li>
+                            <li>PHP (experiencia anterior en desarrollo web)</li>
+                            <li>Bases de datos (MySQL, SQLite)</li>
+                            <li>Linux y CLI básica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section">
+            <div class="container">
+                <h2>Mis Proyectos</h2>
+                <ul class="lista-proyectos">
+                    <li><a href="https://www.urbaloca.es/" target="_blank">Urbaloca >></a></li>
+                    <li><a href="https://github.com/ralpanez/" target="_blank">Github >></a></li>
+                    <li><a href="https://www.youtube.com/@hidrodf" target="_blank">YouTube >></a></li>
+                    <li><a href="https://www.instagram.com/hidrodf" target="_blank">Instagram >></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <form>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rafael Alpañez Vega</p>
+        </div>
+    </footer>
+</body>
+</html>

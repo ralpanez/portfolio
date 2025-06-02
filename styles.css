@@ -1,0 +1,251 @@
+/*
+
+    -Buenas Prácticas en CSS
+        Reset/Normalize:
+        Incluir un reset o normalize CSS al inicio del archivo para evitar estilos predeterminados inconsistentes.
+        Variables CSS:
+        Declarar variables en el selector :root para definir colores, tipografías y otros valores reutilizables.
+        Organización y Comentarios:
+        Estructurar el código CSS en secciones comentadas (por ejemplo, "Header", "Navegación", "Sección Portafolio", etc.) para facilitar la legibilidad y mantenimiento.
+*/
+
+
+/* Reset/Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables CSS */
+:root {
+    --color-primario: #0d6efd;
+    --color-secundario: #084298;
+    --fondo-claro: #e9f0fb;
+    --fondo-oscuro: #072e6a;
+    --fuente: 'Poppins', sans-serif;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cuerpo */
+
+body {
+    font-family: var(--fuente);
+    background-color: var(--fondo-claro);
+    color: var(--color-secundario);
+}
+
+/* Contenedor Principal */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.foto-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Menú */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+nav li {
+    background-color: var(--color-secundario);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+nav li:hover {
+    background-color: var(--fondo-oscuro);
+    transition: background-color 0.3s ease; /* Añadido para suavizar el cambio de color */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Hero */
+
+.hero {
+    background-color: var(--fondo-claro);
+    background-image: url('img/hero_bg.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Sección Portafolio: Sobre Mí (reutilizzaremos la misma estructura para las demás, comentaremos añadidos) */
+
+.section {
+    padding: 40px 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Sección Stack Tecnológico */
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.stack-grid h3 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.stack-grid ul {
+    list-style: disc inside;
+    padding-left: 10px;
+}
+
+.stack-grid li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Sección Mis Proyectos */
+
+.lista-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.lista-proyectos li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Formuario de Contacto */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+form button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Estilo de los enlaces */
+
+a {
+    color: var(--color-primario);
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
